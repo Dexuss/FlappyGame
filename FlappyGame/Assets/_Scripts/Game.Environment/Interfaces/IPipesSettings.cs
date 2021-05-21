@@ -3,4 +3,5 @@
     float GetPipesSpeed();
     float GetSecondsIntervalToNextPipe();
     int GetPipesLimit();
+    float GetPipesHeightMaxDifference();
 }

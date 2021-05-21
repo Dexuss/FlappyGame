@@ -61,24 +61,35 @@ namespace Game.Environment
             var pipesLimit = pipesSettings.GetPipesLimit();
             if (currentPipes.Count < pipesLimit)
             {
-                ISinglePipes pipe = CreatePipes();
-                pipe.GetPipesTransform().position = beginingPoint.position;
-                currentPipes.Add(pipe);
-                lastPipeCreationTime = Time.time;
+                ISinglePipes pipes = CreatePipes();
+                InitializeBeginingPosition(pipes);
+                currentPipes.Add(pipes);
             }
             else
             {
                 ISinglePipes pipes = currentPipes[0];
                 currentPipes.RemoveAt(0);
                 currentPipes.Insert(pipesLimit - 1, pipes);
-                pipes.GetPipesTransform().position = beginingPoint.position;
-                lastPipeCreationTime = Time.time;
+                InitializeBeginingPosition(pipes);
             }
+        }
+
+        private void InitializeBeginingPosition(ISinglePipes pipes)
+        {
+            pipes.GetPipesTransform().position = beginingPoint.position;
+            pipes.GetPipesTransform().position += new Vector3(0, GenerateNextHeight(), 0);
+            lastPipeCreationTime = Time.time;
         }
 
         private ISinglePipes CreatePipes()
         {
             return placeholderPipesFactory.Create(singlePipesPrefab, allPipesContainer);
+        }
+
+        private float GenerateNextHeight()
+        {
+            var pipesHeightMaxDifference = pipesSettings.GetPipesHeightMaxDifference();
+            return Random.Range(-pipesHeightMaxDifference, pipesHeightMaxDifference);
         }
     }
 }

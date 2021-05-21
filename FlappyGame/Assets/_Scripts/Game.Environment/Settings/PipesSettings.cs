@@ -14,6 +14,9 @@ namespace Game.Environment
         [SerializeField, Range(4,20)]
         private int pipesLimit;
 
+        [SerializeField]
+        private float pipesHeightMaxDifference;
+
         public float GetPipesSpeed()
         {
             return pipesSpeed;
@@ -27,6 +30,11 @@ namespace Game.Environment
         public int GetPipesLimit()
         {
             return pipesLimit;
+        }
+
+        public float GetPipesHeightMaxDifference()
+        {
+            return pipesHeightMaxDifference;
         }
     }
 }

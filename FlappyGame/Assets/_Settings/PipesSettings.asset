@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Game.Installers:PipesSettingsInstaller
   settings:
     pipesSpeed: 3
-    secondsIntervalToNextPipe: 0.9
+    secondsIntervalToNextPipe: 1
+    pipesLimit: 4
+    pipesHeightMaxDifference: 1.6
