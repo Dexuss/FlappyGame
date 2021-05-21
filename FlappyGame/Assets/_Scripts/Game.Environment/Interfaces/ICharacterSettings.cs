@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Game.Environment
+﻿namespace Game.Environment
 {
     public interface ICharacterSettings
     {
