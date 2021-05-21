@@ -2,6 +2,6 @@
 {
     public interface IInputSystem
     {
-
+        bool IsTouchReceived();
     }
 }

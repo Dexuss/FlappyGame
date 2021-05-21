@@ -376,7 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1306778623}
   m_Layer: 0
-  m_Name: ===Enviroment===
+  m_Name: ===Environment===
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -507,11 +507,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bird
-      objectReference: {fileID: 0}
-    - target: {fileID: 455939088922237751, guid: 197d202153c2eb24d99f1d0b1cb7f8c7,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 197d202153c2eb24d99f1d0b1cb7f8c7, type: 3}

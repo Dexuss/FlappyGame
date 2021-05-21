@@ -4,14 +4,20 @@ namespace Game.Inputs
 {
     public class InputSystem : IInputSystem
     {
+        #region Fields
+        private bool isTouchedOnce;
+        #endregion
         public bool IsTouchReceived()
         {
-            return UnityEngine.Input.touches.Length == 1 || UnityEngine.Input.GetMouseButton(0);
-        }
-
-        public void Test()
-        {
-            Debug.Log("test");
+            if (isTouchedOnce && Input.touchCount == 0)
+            {
+                isTouchedOnce = false;
+            }
+            else if (!isTouchedOnce && Input.touchCount > 0)
+            {
+                isTouchedOnce = true;
+            }
+            return isTouchedOnce || Input.GetMouseButtonDown(0);
         }
     }
 }
