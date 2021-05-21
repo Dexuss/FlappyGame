@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Game.Environment\Character.cs" />
     <Compile Include="Assets\_Scripts\Game.Environment\Interfaces\ICharacter.cs" />
+    <Compile Include="Assets\_Scripts\Game.Environment\Interfaces\ICharacterSettings.cs" />
+    <Compile Include="Assets\_Scripts\Game.Environment\Settings\CharacterSettings.cs" />
     <Compile Include="Assets\_Scripts\Game.InputSystem\System\InputSystem.cs" />
     <Compile Include="Assets\_Scripts\Game.InputSystem\System\Interfaces\IInputSystem.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Base\BaseAsSingleInstaller.cs" />
@@ -74,6 +76,8 @@
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Concrete\InputSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Interfaces\IInputSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\InputSystemAsSingleInstaller.cs" />
+    <Compile Include="Assets\_Scripts\Game.Installers\Settings\BaseSettingsInstaller.cs" />
+    <Compile Include="Assets\_Scripts\Game.Installers\Settings\CharacterSettingsInstaller.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

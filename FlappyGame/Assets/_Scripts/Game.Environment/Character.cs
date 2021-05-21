@@ -9,18 +9,24 @@ namespace Game.Environment
         [Inject]
         private IInputSystemFacade inputSystemFacade;
 
+        [Inject]
+        private ICharacterSettings characterSettings;
+
         #region Fields
         [SerializeField]
         private Rigidbody2D characterRigidbody;
-
-        private float velocity = 1.6f;
         #endregion
+
+        void Start()
+        {
+            characterRigidbody.gravityScale = characterSettings.GetRigidbodyGravity();
+        }
 
         void Update()
         {
             if (inputSystemFacade.IsTouchReceived())
             {
-                characterRigidbody.velocity = Vector2.up * velocity;
+                characterRigidbody.velocity = Vector2.up * characterSettings.GetFlyVelocity();
             }
         }
     }
