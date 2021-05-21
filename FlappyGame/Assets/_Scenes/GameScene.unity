@@ -591,11 +591,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
-    - target: {fileID: 2142475791323273489, guid: bb326e32fb9198243898e94dd9315713,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2142475791323273490, guid: bb326e32fb9198243898e94dd9315713,
         type: 3}
       propertyPath: m_RootOrder

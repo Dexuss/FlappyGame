@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3430646223885347723}
   - component: {fileID: 4567133518469875366}
   - component: {fileID: 455939090170817216}
+  - component: {fileID: 492316545}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -185,3 +186,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0898eae8ef14647b47ed9a742056d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  auctionsSystemSettingsInstaller: {fileID: 11400000, guid: a891089dac3905244844507f7456236c,
+    type: 2}
+--- !u!95 &492316545
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455939088922237750}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b90f51896bdc6054ca8dc14fe98979fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
