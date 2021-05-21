@@ -5,12 +5,28 @@ namespace Game.Environment
     [System.Serializable]
     public class PipesSettings : IPipesSettings
     {
-        //[SerializeField]
-        //private float rigidbodyGravity;
+        [SerializeField]
+        private float pipesSpeed;
 
-        //public float GetRigidbodyGravity()
-        //{
-        //    return rigidbodyGravity;
-        //}
+        [SerializeField]
+        private float secondsIntervalToNextPipe;
+
+        [SerializeField, Range(4,20)]
+        private int pipesLimit;
+
+        public float GetPipesSpeed()
+        {
+            return pipesSpeed;
+        }
+
+        public float GetSecondsIntervalToNextPipe()
+        {
+            return secondsIntervalToNextPipe;
+        }
+
+        public int GetPipesLimit()
+        {
+            return pipesLimit;
+        }
     }
 }

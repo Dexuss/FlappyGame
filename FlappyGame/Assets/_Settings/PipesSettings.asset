@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: PipesSettings
   m_EditorClassIdentifier: Assembly-CSharp:Game.Installers:PipesSettingsInstaller
+  settings:
+    pipesSpeed: 3
+    secondsIntervalToNextPipe: 0.9
