@@ -81,8 +81,6 @@ MonoBehaviour:
   pipesTypes: []
   allPipesContainer: {fileID: 1933684805907877050}
   beginingPoint: {fileID: 4457183915118297415}
-  middlePoint: {fileID: 0}
-  endPoint: {fileID: 0}
   singlePipesPrefab: {fileID: 5085665519231328437, guid: 8a64bca1f8a89504d8e250336ba89151,
     type: 3}
 --- !u!114 &6813333073457052346
