@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: PipesSettings
   m_EditorClassIdentifier: Assembly-CSharp:Game.Installers:PipesSettingsInstaller
   settings:
-    pipesSpeed: 2.5
-    secondsIntervalToNextPipe: 1.2
-    pipesLimit: 4
-    pipesHeightMaxDifference: 1.4
+    pipesSpeed: 3
+    secondsIntervalToNextPipe: 1
+    pipesLimit: 6
+    pipesHeightMaxDifference: 2
+    usedPipes:
+    - {fileID: 11400000, guid: f5030f037e0f62c4dbcc90878ab434a6, type: 2}
+    - {fileID: 11400000, guid: 372b47f168b0eee4fa84c20b03ab4ea3, type: 2}
+    - {fileID: 11400000, guid: 65cf7cf61abbebd46bcef4de4fc02c63, type: 2}

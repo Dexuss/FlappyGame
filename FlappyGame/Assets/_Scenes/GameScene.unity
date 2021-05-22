@@ -749,6 +749,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1306778623}
     m_Modifications:
+    - target: {fileID: 6813333073457052348, guid: 2a02ad48f6ca22240ac5bf031c3050de,
+        type: 3}
+      propertyPath: pipesSettingsInstaller
+      value: 
+      objectReference: {fileID: 11400000, guid: 13c565e3a1d3ccc408b81f3cd61c7eed,
+        type: 2}
     - target: {fileID: 6813333073457052349, guid: 2a02ad48f6ca22240ac5bf031c3050de,
         type: 3}
       propertyPath: m_RootOrder

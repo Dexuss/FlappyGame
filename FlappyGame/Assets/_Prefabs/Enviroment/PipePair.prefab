@@ -28,9 +28,9 @@ Transform:
   m_LocalPosition: {x: 1.12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 402064377420453811}
-  - {fileID: 1515160232554059465}
   - {fileID: 402064376501108016}
+  - {fileID: 1515160232554059465}
+  - {fileID: 402064377420453811}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipesTransform: {fileID: 402064376286234835}
-  topPipeSprite: {fileID: 0}
-  bottomPipeSprite: {fileID: 0}
+  topPipeSprite: {fileID: 402064376501108019}
+  bottomPipeSprite: {fileID: 402064377420453810}
 --- !u!1 &402064376501108017
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 402064376501108019}
   - component: {fileID: 402064376501108018}
   m_Layer: 0
-  m_Name: pipe (1)
+  m_Name: pipe Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ Transform:
   m_LocalScale: {x: -0.15, y: 0.46, z: 1}
   m_Children: []
   m_Father: {fileID: 402064376286234835}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &402064376501108019
 SpriteRenderer:
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 402064377420453810}
   - component: {fileID: 402064377420453813}
   m_Layer: 0
-  m_Name: pipe
+  m_Name: pipe Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,7 +187,7 @@ Transform:
   m_LocalScale: {x: 0.15, y: 0.46, z: 1}
   m_Children: []
   m_Father: {fileID: 402064376286234835}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &402064377420453810
 SpriteRenderer:
