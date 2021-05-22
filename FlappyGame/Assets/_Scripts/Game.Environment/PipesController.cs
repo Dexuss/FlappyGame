@@ -22,12 +22,6 @@ namespace Game.Environment
         private Transform beginingPoint;
 
         [SerializeField]
-        private Transform middlePoint;
-
-        [SerializeField]
-        private Transform endPoint;
-
-        [SerializeField]
         private SinglePipes singlePipesPrefab;
 
         #region Fields
