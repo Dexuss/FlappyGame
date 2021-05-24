@@ -15,5 +15,10 @@ namespace Game.Installers
         {
             return inputSystem.IsTouchReceived();
         }
+
+        public bool IsDoubleTap()
+        {
+            return inputSystem.IsDoubleTap();
+        }
     }
 }

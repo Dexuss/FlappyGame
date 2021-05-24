@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pipeSprite: {fileID: 21300000, guid: d372aefec35e5ac4b85f60de8223e629, type: 3}
   pipesColor: {r: 1, g: 0, b: 0, a: 1}
-  requiredPoints: 2
+  requiredPoints: 1

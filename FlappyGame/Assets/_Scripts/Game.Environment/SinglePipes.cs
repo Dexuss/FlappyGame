@@ -1,6 +1,5 @@
 ﻿using Game.Data;
 using UnityEngine;
-using Zenject;
 
 public class SinglePipes : MonoBehaviour, ISinglePipes
 {
@@ -22,11 +21,13 @@ public class SinglePipes : MonoBehaviour, ISinglePipes
     [SerializeField]
     private BoxCollider2D pipeBottomCollider;
 
+    [SerializeField]
+    private Renderer pipesRenderer;
+
     private PipesData currentPipesData;
 
     public void ClearPipes()
     {
-        Debug.Log(gameObject);
         Destroy(gameObject);
     }
 
@@ -49,5 +50,11 @@ public class SinglePipes : MonoBehaviour, ISinglePipes
     public int GetRequiredPoints()
     {
         return currentPipesData.requiredPoints;
+    }
+
+    public bool IsVisible()
+    {
+        Vector3 screenPoint = Camera.main.WorldToViewportPoint(pipesTransform.position);
+        return screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
     }
 }

@@ -14,6 +14,7 @@
 
         public void AddBomb()
         {
+            if (bombsCount >= 3) return;
             bombsCount++;
         }
 
@@ -30,6 +31,11 @@
         public int GetCurrentBombsCount()
         {
             return bombsCount;
+        }
+
+        public void RestartScore()
+        {
+            playerScore = 0;
         }
     }
 }

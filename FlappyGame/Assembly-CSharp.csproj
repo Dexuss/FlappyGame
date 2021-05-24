@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
     <Compile Include="Assets\_Scripts\Game.Data\PipesData.cs" />
     <Compile Include="Assets\_Scripts\Game.Environment\Character.cs" />
     <Compile Include="Assets\_Scripts\Game.Environment\Factory\Concrete\ConcretePipesFactory.cs" />
@@ -111,6 +112,8 @@
     <Compile Include="Assets\_Scripts\Game.View\GameOverView\Interfaces\IGameOverView.cs" />
     <Compile Include="Assets\_Scripts\Game.View\GamePlayView\GameplayView.cs" />
     <Compile Include="Assets\_Scripts\Game.View\GamePlayView\Interfaces\IGameplayView.cs" />
+    <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
+    <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

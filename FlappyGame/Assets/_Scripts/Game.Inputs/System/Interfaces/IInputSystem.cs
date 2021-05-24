@@ -3,5 +3,6 @@
     public interface IInputSystem
     {
         bool IsTouchReceived();
+        bool IsDoubleTap();
     }
 }

@@ -41,7 +41,6 @@ namespace Game.Score
             return scoreSystem.GetCurrentScore();
         }
 
-
         public void AddBomb()
         {
             scoreSystem.AddBomb();
@@ -64,13 +63,18 @@ namespace Game.Score
 
         public void ShowBombs()
         {
-            gameplayView.UpdateBombsCounter();
+            UpdateBombsCounter();
             gameplayView.ShowBombs();
         }
 
         public void HideBombs()
         {
             gameplayView.HideBombs();
+        }
+
+        public void UpdateBombsCounter()
+        {
+            gameplayView.UpdateBombsCounter();
         }
 
         public void SetCurrentBombs()
@@ -82,6 +86,10 @@ namespace Game.Score
         {
             return scoreSettings.GetPointsForBomb();
         }
-    }
 
+        public void RestartScore()
+        {
+            scoreSystem.RestartScore();
+        }
+    }
 }

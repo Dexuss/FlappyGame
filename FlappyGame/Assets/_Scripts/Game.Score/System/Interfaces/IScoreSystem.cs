@@ -7,5 +7,6 @@
         void AddBomb();
         void RemoveBomb();
         int GetCurrentBombsCount();
+        void RestartScore();
     }
 }

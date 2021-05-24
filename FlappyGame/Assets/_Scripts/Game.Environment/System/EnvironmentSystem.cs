@@ -16,5 +16,10 @@ namespace Game.Environment
             this.pipesController = pipesController;
             this.character = character;
         }
+
+        public void DetonatePipes()
+        {
+            pipesController.DetonatePipes();
+        }
     }
 }

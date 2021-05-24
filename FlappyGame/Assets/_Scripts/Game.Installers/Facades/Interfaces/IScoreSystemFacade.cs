@@ -14,5 +14,7 @@
         void HideBombs();
         void SetCurrentBombs();
         int GetPointsForBomb();
+        void UpdateBombsCounter();
+        void RestartScore();
     }
 }
