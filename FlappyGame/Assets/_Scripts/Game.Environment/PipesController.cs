@@ -103,5 +103,17 @@ namespace Game.Environment
         {
             return pipesSettings.GetCurrentPipesData().OrderBy(guid => Guid.NewGuid()).FirstOrDefault(data => data.requiredPoints <= scoreSystemFacade.GetCurrentScore());
         }
+
+        public void DetonatePipes()
+        {
+            foreach (var pipes in currentPipes.ToList())
+            {
+                if (pipes.IsVisible())
+                {
+                    pipes.ClearPipes();
+                    currentPipes.Remove(pipes);
+                }
+            }
+        }
     }
 }

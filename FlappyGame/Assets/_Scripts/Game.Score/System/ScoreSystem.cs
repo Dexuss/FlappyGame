@@ -14,6 +14,7 @@
 
         public void AddBomb()
         {
+            if (bombsCount >= 3) return;
             bombsCount++;
         }
 

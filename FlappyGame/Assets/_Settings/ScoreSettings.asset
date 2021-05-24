@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ScoreSettings
   m_EditorClassIdentifier: 
   settings:
-    pointsForBomb: 0
+    pointsForBomb: 2

@@ -32,9 +32,15 @@ namespace Game.Environment
         void Update()
         {
             if (inputSystemFacade.IsTouchReceived())
-            {
-                characterRigidbody.velocity = Vector2.up * characterSettings.GetFlyVelocity();
-            }
+                FlyUp();
+
+            if (inputSystemFacade.IsDoubleTap())
+                DetonateBomb();
+        }
+
+        private void FlyUp()
+        {
+            characterRigidbody.velocity = Vector2.up * characterSettings.GetFlyVelocity();
         }
 
         void OnCollisionEnter2D(Collision2D collider)
@@ -56,6 +62,17 @@ namespace Game.Environment
                 scoreSystemFacade.AddBomb();
                 scoreSystemFacade.ShowBombs();
             }
+        }
+
+        private void DetonateBomb()
+        {
+            if (scoreSystemFacade.GetCurrentBombsCount() == 0) return;
+            environmentSystemFacade.DetonatePipes();
+            scoreSystemFacade.RemoveBomb();
+            if (scoreSystemFacade.GetCurrentBombsCount() > 0)
+                scoreSystemFacade.UpdateBombsCounter();
+            else
+                scoreSystemFacade.HideBombs();
         }
     }
 }

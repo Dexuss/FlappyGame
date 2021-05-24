@@ -64,13 +64,18 @@ namespace Game.Score
 
         public void ShowBombs()
         {
-            gameplayView.UpdateBombsCounter();
+            UpdateBombsCounter();
             gameplayView.ShowBombs();
         }
 
         public void HideBombs()
         {
             gameplayView.HideBombs();
+        }
+
+        public void UpdateBombsCounter()
+        {
+            gameplayView.UpdateBombsCounter();
         }
 
         public void SetCurrentBombs()

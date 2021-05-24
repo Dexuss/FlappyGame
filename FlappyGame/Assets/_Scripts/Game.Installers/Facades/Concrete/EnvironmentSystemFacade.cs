@@ -10,5 +10,10 @@ namespace Game.Installers
         {
             this.environmentSystem = environmentSystem;
         }
+
+        public void DetonatePipes()
+        {
+            environmentSystem.DetonatePipes();
+        }
     }
 }
