@@ -51,7 +51,7 @@ namespace Game.Environment
 
         private void AddBomb()
         {
-            if(scoreSystemFacade.GetCurrentScore() % 2 == 0)
+            if(scoreSystemFacade.GetCurrentScore() % scoreSystemFacade.GetPointsForBomb() == 0)
             {
                 scoreSystemFacade.AddBomb();
                 scoreSystemFacade.ShowBombs();

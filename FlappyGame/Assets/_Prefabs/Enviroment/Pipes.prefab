@@ -78,7 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0daa3a9ceaecc4740a5a9a4823e5f33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipesTypes: []
   allPipesContainer: {fileID: 1933684805907877050}
   beginingPoint: {fileID: 4457183915118297415}
   singlePipesPrefab: {fileID: 5085665519231328437, guid: 8a64bca1f8a89504d8e250336ba89151,
@@ -96,9 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _components:
-  - {fileID: 6813333073457052349}
+  - {fileID: 6813333073457052345}
   _identifier: 
-  _useSceneContext: 0
+  _useSceneContext: 1
   _context: {fileID: 0}
   _bindType: 0
 --- !u!114 &6813333073457052347

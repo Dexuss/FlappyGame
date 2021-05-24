@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e2a91b471a2c34fb8c50e88d84bf46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSettingsInstaller: {fileID: 11400000, guid: 49a42879bda2c58479bd10f2fba8a5c3,
+    type: 2}

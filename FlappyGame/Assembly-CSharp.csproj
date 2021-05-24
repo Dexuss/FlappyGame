@@ -100,6 +100,9 @@
     <Compile Include="Assets\_Scripts\Game.Installers\Settings\BaseSettingsInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Settings\CharacterSettingsInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Settings\PipesSettingsIntaller.cs" />
+    <Compile Include="Assets\_Scripts\Game.Installers\Settings\ScoreSettingsInstaller.cs" />
+    <Compile Include="Assets\_Scripts\Game.Score\Settings\Interfaces\IScoreSettings.cs" />
+    <Compile Include="Assets\_Scripts\Game.Score\Settings\ScoreSettings.cs" />
     <Compile Include="Assets\_Scripts\Game.Score\System\Interfaces\IScoreSystem.cs" />
     <Compile Include="Assets\_Scripts\Game.Score\System\ScoreSystem.cs" />
     <Compile Include="Assets\_Scripts\Game.View\Base\BaseView.cs" />

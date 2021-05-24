@@ -8,12 +8,14 @@ namespace Game.Score
         private readonly IScoreSystem scoreSystem;
         private readonly IGameOverView gameOverView;
         private readonly IGameplayView gameplayView;
+        private readonly IScoreSettings scoreSettings;
 
-        public ScoreSystemFacade(IScoreSystem scoreSystem, IGameOverView gameOverView, IGameplayView gameplayView)
+        public ScoreSystemFacade(IScoreSystem scoreSystem, IGameOverView gameOverView, IGameplayView gameplayView, IScoreSettings scoreSettings)
         {
             this.scoreSystem = scoreSystem;
             this.gameOverView = gameOverView;
             this.gameplayView = gameplayView;
+            this.scoreSettings = scoreSettings;
         }
 
         public void ShowGameOverView() 
@@ -74,6 +76,11 @@ namespace Game.Score
         public void SetCurrentBombs()
         {
             gameplayView.SetBombsCount();
+        }
+
+        public int GetPointsForBomb()
+        {
+            return scoreSettings.GetPointsForBomb();
         }
     }
 

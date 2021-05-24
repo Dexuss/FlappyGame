@@ -13,5 +13,6 @@
         void ShowBombs();
         void HideBombs();
         void SetCurrentBombs();
+        int GetPointsForBomb();
     }
 }
