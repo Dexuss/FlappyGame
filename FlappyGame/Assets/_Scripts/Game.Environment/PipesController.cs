@@ -1,4 +1,5 @@
 ﻿using Game.Data;
+using Game.Installers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,8 @@ namespace Game.Environment
         [Inject]
         private IPipesSettings pipesSettings;
 
-        [SerializeField]
-        private List<SinglePipes> pipesTypes = new List<SinglePipes>();
+        [Inject]
+        private IScoreSystemFacade scoreSystemFacade;
 
         [SerializeField]
         private Transform allPipesContainer;
@@ -29,24 +30,33 @@ namespace Game.Environment
 
         #region Fields
         private List<ISinglePipes> currentPipes = new List<ISinglePipes>();
-        private float lastPipeCreationTime;
+        private float currentTime;
         private float nextPipeTime;
         #endregion
 
         void Start()
         {
-
+            
         }
 
         void Update()
+        {
+            MoveCurrentPipes();
+            IntervallyCreatePipes();
+        }
+
+        private void MoveCurrentPipes()
         {
             foreach (var pipes in currentPipes)
             {
                 pipes.GetPipesTransform().position += Vector3.left * pipesSettings.GetPipesSpeed() * Time.deltaTime;
             }
+        }
 
-            var elapsedTime = Time.time - lastPipeCreationTime;
-            if (Time.time > nextPipeTime)
+        private void IntervallyCreatePipes()
+        {
+            currentTime += Time.deltaTime;
+            if (currentTime > nextPipeTime)
             {
                 nextPipeTime += pipesSettings.GetSecondsIntervalToNextPipe();
                 CreateNewPipes();
@@ -76,7 +86,6 @@ namespace Game.Environment
         {
             pipes.GetPipesTransform().position = beginingPoint.position;
             pipes.GetPipesTransform().position += new Vector3(0, GenerateNextHeight(), 0);
-            lastPipeCreationTime = Time.time;
         }
 
         private ISinglePipes CreatePipes()
@@ -92,8 +101,7 @@ namespace Game.Environment
 
         private PipesData ChooseRandomPipeData()
         {
-            int currentScore = 0; //temp, current score here
-            return pipesSettings.GetCurrentPipesData().OrderBy(guid => Guid.NewGuid()).FirstOrDefault(data => data.requiredPoints <= currentScore);
+            return pipesSettings.GetCurrentPipesData().OrderBy(guid => Guid.NewGuid()).FirstOrDefault(data => data.requiredPoints <= scoreSystemFacade.GetCurrentScore());
         }
     }
 }

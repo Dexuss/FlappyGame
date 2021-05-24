@@ -13,7 +13,22 @@ public class SinglePipes : MonoBehaviour, ISinglePipes
     [SerializeField]
     private SpriteRenderer bottomPipeSprite;
 
+    [SerializeField]
+    private BoxCollider2D scoreCollider;
+
+    [SerializeField]
+    private BoxCollider2D pipeTopCollider;
+
+    [SerializeField]
+    private BoxCollider2D pipeBottomCollider;
+
     private PipesData currentPipesData;
+
+    public void ClearPipes()
+    {
+        Debug.Log(gameObject);
+        Destroy(gameObject);
+    }
 
     public Transform GetPipesTransform()
     {

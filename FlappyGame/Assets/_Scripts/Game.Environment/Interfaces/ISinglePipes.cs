@@ -3,6 +3,7 @@ using UnityEngine;
 
 public interface ISinglePipes
 {
-    Transform GetPipesTransform();
     void InitialPipesData(PipesData currentPipesData);
+    void ClearPipes();
+    Transform GetPipesTransform();
 }

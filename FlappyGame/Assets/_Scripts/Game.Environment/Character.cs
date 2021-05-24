@@ -1,4 +1,5 @@
-﻿using Game.Installers;
+﻿using Game.Inputs;
+using Game.Installers;
 using UnityEngine;
 using Zenject;
 
@@ -11,6 +12,12 @@ namespace Game.Environment
 
         [Inject]
         private ICharacterSettings characterSettings;
+
+        [Inject]
+        private IScoreSystemFacade scoreSystemFacade;
+
+        [Inject]
+        private IEnvironmentSystemFacade environmentSystemFacade;
 
         #region Fields
         [SerializeField]
@@ -27,6 +34,27 @@ namespace Game.Environment
             if (inputSystemFacade.IsTouchReceived())
             {
                 characterRigidbody.velocity = Vector2.up * characterSettings.GetFlyVelocity();
+            }
+        }
+
+        void OnCollisionEnter2D(Collision2D collider)
+        {
+            scoreSystemFacade.ShowGameOverView();
+        }
+
+        void OnTriggerEnter2D(Collider2D collider)
+        {
+            scoreSystemFacade.AddPoint();
+            AddBomb();
+            scoreSystemFacade.SetCurrentPoints();
+        }
+
+        private void AddBomb()
+        {
+            if(scoreSystemFacade.GetCurrentScore() % scoreSystemFacade.GetPointsForBomb() == 0)
+            {
+                scoreSystemFacade.AddBomb();
+                scoreSystemFacade.ShowBombs();
             }
         }
     }

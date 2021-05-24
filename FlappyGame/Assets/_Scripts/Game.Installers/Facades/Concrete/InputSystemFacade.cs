@@ -10,6 +10,7 @@ namespace Game.Installers
         {
             this.inputSystem = inputSystem;
         }
+
         public bool IsTouchReceived()
         {
             return inputSystem.IsTouchReceived();
