@@ -6,5 +6,6 @@
         void SetBombsCount();
         void ShowBombs();
         void HideBombs();
+        void UpdateBombsCounter();
     }
 }

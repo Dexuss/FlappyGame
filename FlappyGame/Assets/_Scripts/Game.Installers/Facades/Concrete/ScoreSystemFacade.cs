@@ -62,6 +62,7 @@ namespace Game.Score
 
         public void ShowBombs()
         {
+            gameplayView.UpdateBombsCounter();
             gameplayView.ShowBombs();
         }
 

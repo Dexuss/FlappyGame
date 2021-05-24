@@ -45,5 +45,10 @@ namespace Game.View
             bombs.SetActive(false);
             isBombsVisible = false;
         }
+
+        public void UpdateBombsCounter()
+        {
+            bombsCount.text = scoreSystemFacade.GetCurrentBombsCount().ToString();
+        }
     }
 }
