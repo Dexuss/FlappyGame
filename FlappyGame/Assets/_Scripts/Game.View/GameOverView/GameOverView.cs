@@ -11,12 +11,26 @@ namespace Game.View
         [Inject]
         private IEnvironmentSystemFacade environmentSystemFacade;
 
+        [Inject]
+        private IScoreSystemFacade scoreSystemFacade;
+
         [SerializeField]
         private Button playAgainButton;
 
-        void Start()
+        [SerializeField]
+        private Text score;
+
+        private void Start()
         {
             AddButtonListeners();
+        }
+
+        public override void ShowView()
+        {
+            score.text = scoreSystemFacade.GetCurrentScore().ToString();
+            //scoreSystemFacade.SaveScore();
+            scoreSystemFacade.RestartScore();
+            base.ShowView();
         }
 
         private void AddButtonListeners()

@@ -41,7 +41,6 @@ namespace Game.Score
             return scoreSystem.GetCurrentScore();
         }
 
-
         public void AddBomb()
         {
             scoreSystem.AddBomb();
@@ -87,6 +86,10 @@ namespace Game.Score
         {
             return scoreSettings.GetPointsForBomb();
         }
-    }
 
+        public void RestartScore()
+        {
+            scoreSystem.RestartScore();
+        }
+    }
 }

@@ -32,5 +32,10 @@
         {
             return bombsCount;
         }
+
+        public void RestartScore()
+        {
+            playerScore = 0;
+        }
     }
 }
