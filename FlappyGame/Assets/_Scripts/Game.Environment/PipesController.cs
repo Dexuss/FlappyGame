@@ -1,4 +1,5 @@
 ﻿using Game.Data;
+using Game.Installers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,9 @@ namespace Game.Environment
 
         [Inject]
         private IPipesSettings pipesSettings;
+
+        [Inject]
+        private IScoreSystemFacade scoreSystemFacade;
 
         [SerializeField]
         private Transform allPipesContainer;
@@ -97,8 +101,7 @@ namespace Game.Environment
 
         private PipesData ChooseRandomPipeData()
         {
-            int currentScore = 0; //temp, current score here
-            return pipesSettings.GetCurrentPipesData().OrderBy(guid => Guid.NewGuid()).FirstOrDefault(data => data.requiredPoints <= currentScore);
+            return pipesSettings.GetCurrentPipesData().OrderBy(guid => Guid.NewGuid()).FirstOrDefault(data => data.requiredPoints <= scoreSystemFacade.GetCurrentScore());
         }
     }
 }
