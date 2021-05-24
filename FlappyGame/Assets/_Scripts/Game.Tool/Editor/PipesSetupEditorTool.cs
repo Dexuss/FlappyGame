@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using Zenject;
 
 namespace Game.Tool
 {

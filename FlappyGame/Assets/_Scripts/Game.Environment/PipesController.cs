@@ -16,9 +16,6 @@ namespace Game.Environment
         private IPipesSettings pipesSettings;
 
         [SerializeField]
-        private List<SinglePipes> pipesTypes = new List<SinglePipes>();
-
-        [SerializeField]
         private Transform allPipesContainer;
 
         [SerializeField]

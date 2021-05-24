@@ -29,5 +29,10 @@ namespace Game.Environment
                 characterRigidbody.velocity = Vector2.up * characterSettings.GetFlyVelocity();
             }
         }
+
+        void OnCollisionEnter2D(Collision2D collider)
+        {
+            Debug.Log("trigger");
+        }
     }
 }

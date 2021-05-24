@@ -85,11 +85,16 @@
     <Compile Include="Assets\_Scripts\Game.Installers\CharacterMonoBehaviourInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Concrete\InputSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Interfaces\IInputSystemFacade.cs" />
+    <Compile Include="Assets\_Scripts\Game.Installers\GameOverViewMonoBehaviourInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\InputSystemAsSingleInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\PipesMonoBehaviourInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Settings\BaseSettingsInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Settings\CharacterSettingsInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Settings\PipesSettingsIntaller.cs" />
+    <Compile Include="Assets\_Scripts\Game.View\Base\BaseView.cs" />
+    <Compile Include="Assets\_Scripts\Game.View\Base\Interface\IBaseView.cs" />
+    <Compile Include="Assets\_Scripts\Game.View\GameOverView\GameOverView.cs" />
+    <Compile Include="Assets\_Scripts\Game.View\GameOverView\Interfaces\IGameOverView.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
