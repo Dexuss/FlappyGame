@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0898eae8ef14647b47ed9a742056d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  auctionsSystemSettingsInstaller: {fileID: 11400000, guid: a891089dac3905244844507f7456236c,
+  characterSettingsInstaller: {fileID: 11400000, guid: a891089dac3905244844507f7456236c,
     type: 2}
 --- !u!95 &492316545
 Animator:

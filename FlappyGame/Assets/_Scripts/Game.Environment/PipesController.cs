@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Game.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -57,6 +60,7 @@ namespace Game.Environment
             {
                 ISinglePipes pipes = CreatePipes();
                 InitializeBeginingPosition(pipes);
+                pipes.InitialPipesData(ChooseRandomPipeData());
                 currentPipes.Add(pipes);
             }
             else
@@ -83,7 +87,13 @@ namespace Game.Environment
         private float GenerateNextHeight()
         {
             var pipesHeightMaxDifference = pipesSettings.GetPipesHeightMaxDifference();
-            return Random.Range(-pipesHeightMaxDifference, pipesHeightMaxDifference);
+            return UnityEngine.Random.Range(-pipesHeightMaxDifference, pipesHeightMaxDifference);
+        }
+
+        private PipesData ChooseRandomPipeData()
+        {
+            int currentScore = 0; //temp, current score here
+            return pipesSettings.GetCurrentPipesData().OrderBy(guid => Guid.NewGuid()).FirstOrDefault(data => data.requiredPoints <= currentScore);
         }
     }
 }

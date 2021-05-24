@@ -6,13 +6,13 @@ namespace Game.Installers
     public class CharacterMonoBehaviourInstaller : BaseMonoBehaviourInstaller
     {
         [SerializeField, Header("Settings")]
-        private CharacterSettingsInstaller auctionsSystemSettingsInstaller;
+        private CharacterSettingsInstaller characterSettingsInstaller;
 
         public override void InstallSystem()
         {
             base.InstallSystem();
             BindContractAndSubstitutionWithModeFromResolve<ICharacter, Character>();
-            auctionsSystemSettingsInstaller.InstallBindingInSubcontainer(Container);
+            characterSettingsInstaller.InstallBindingInSubcontainer(Container);
             BindContractAndSubstitutionWithModeFromResolve<ICharacterSettings, CharacterSettings>();
         }
     }

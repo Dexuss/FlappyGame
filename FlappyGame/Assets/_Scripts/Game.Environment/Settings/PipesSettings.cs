@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Game.Data;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Game.Environment
 {
@@ -16,6 +18,9 @@ namespace Game.Environment
 
         [SerializeField]
         private float pipesHeightMaxDifference;
+
+        [SerializeField]
+        private List<PipesData> usedPipes = new List<PipesData>();
 
         public float GetPipesSpeed()
         {
@@ -35,6 +40,11 @@ namespace Game.Environment
         public float GetPipesHeightMaxDifference()
         {
             return pipesHeightMaxDifference;
+        }
+
+        public List<PipesData> GetCurrentPipesData()
+        {
+            return usedPipes;
         }
     }
 }
