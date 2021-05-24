@@ -24,6 +24,12 @@ public class SinglePipes : MonoBehaviour, ISinglePipes
 
     private PipesData currentPipesData;
 
+    public void ClearPipes()
+    {
+        Debug.Log(gameObject);
+        Destroy(gameObject);
+    }
+
     public Transform GetPipesTransform()
     {
         return pipesTransform;

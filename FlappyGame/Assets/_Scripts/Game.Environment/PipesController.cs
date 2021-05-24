@@ -26,24 +26,34 @@ namespace Game.Environment
 
         #region Fields
         private List<ISinglePipes> currentPipes = new List<ISinglePipes>();
-        private float lastPipeCreationTime;
+        private float currentTime;
         private float nextPipeTime;
         #endregion
 
         void Start()
         {
-
+            
         }
 
         void Update()
+        {
+            MoveCurrentPipes();
+            IntervallyCreatePipes();
+        }
+
+        private void MoveCurrentPipes()
         {
             foreach (var pipes in currentPipes)
             {
                 pipes.GetPipesTransform().position += Vector3.left * pipesSettings.GetPipesSpeed() * Time.deltaTime;
             }
+        }
 
-            var elapsedTime = Time.time - lastPipeCreationTime;
-            if (Time.time > nextPipeTime)
+        private void IntervallyCreatePipes()
+        {
+            currentTime += Time.deltaTime;
+            Debug.Log(currentTime);
+            if (currentTime > nextPipeTime)
             {
                 nextPipeTime += pipesSettings.GetSecondsIntervalToNextPipe();
                 CreateNewPipes();
@@ -73,7 +83,6 @@ namespace Game.Environment
         {
             pipes.GetPipesTransform().position = beginingPoint.position;
             pipes.GetPipesTransform().position += new Vector3(0, GenerateNextHeight(), 0);
-            lastPipeCreationTime = Time.time;
         }
 
         private ISinglePipes CreatePipes()

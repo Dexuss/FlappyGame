@@ -1,4 +1,5 @@
 ﻿using Game.Score;
+using Game.View;
 using Zenject;
 
 namespace Game.Installers
@@ -9,6 +10,7 @@ namespace Game.Installers
         {
             base.InstallSystem(subContainer);
             BindContractAndSubstitutionWithModeAsSingle<IScoreSystem, ScoreSystem>();
+            BindContractAndSubstitutionWithModeFromResolve<IGameOverView, GameOverView>();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Game.Installers
+﻿namespace Game.Inputs
 {
     public interface IInputSystemFacade
     {

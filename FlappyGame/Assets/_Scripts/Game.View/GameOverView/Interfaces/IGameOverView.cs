@@ -2,6 +2,6 @@
 {
     public interface IGameOverView: IBaseView
     {
-
+        void FreezeScene();
     }
 }

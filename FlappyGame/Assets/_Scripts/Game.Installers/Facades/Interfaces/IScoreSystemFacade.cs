@@ -2,6 +2,7 @@
 {
     public interface IScoreSystemFacade
     {
-
+        void ShowGameOverView();
+        void HideGameOverView();
     }
 }

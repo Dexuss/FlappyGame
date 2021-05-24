@@ -15,7 +15,7 @@ MonoBehaviour:
   settings:
     pipesSpeed: 3
     secondsIntervalToNextPipe: 1
-    pipesLimit: 6
+    pipesLimit: 4
     pipesHeightMaxDifference: 2
     usedPipes:
     - {fileID: 11400000, guid: f5030f037e0f62c4dbcc90878ab434a6, type: 2}

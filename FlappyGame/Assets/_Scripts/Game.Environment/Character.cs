@@ -1,4 +1,5 @@
-﻿using Game.Installers;
+﻿using Game.Inputs;
+using Game.Installers;
 using UnityEngine;
 using Zenject;
 
@@ -11,6 +12,9 @@ namespace Game.Environment
 
         [Inject]
         private ICharacterSettings characterSettings;
+
+        [Inject]
+        private IScoreSystemFacade scoreSystemFacade;
 
         #region Fields
         [SerializeField]
@@ -32,7 +36,7 @@ namespace Game.Environment
 
         void OnCollisionEnter2D(Collision2D collider)
         {
-            Debug.Log("trigger");
+            scoreSystemFacade.ShowGameOverView();
         }
     }
 }
