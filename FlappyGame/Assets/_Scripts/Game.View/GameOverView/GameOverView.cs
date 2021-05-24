@@ -31,7 +31,6 @@ namespace Game.View
 
         public void PlayAgain()
         {
-            environmentSystemFacade.ClearPipes();
             Time.timeScale = 1;
             SceneManager.LoadScene(0);
         }

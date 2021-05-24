@@ -93,6 +93,7 @@
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Interfaces\IInputSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Interfaces\IScoreSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\GameOverViewMonoBehaviourInstaller.cs" />
+    <Compile Include="Assets\_Scripts\Game.Installers\GameplayViewMonobehaviourInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\InputSystemAsSingleInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\PipesMonoBehaviourInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\ScoreSystemAsSingleInstaller.cs" />
@@ -105,6 +106,8 @@
     <Compile Include="Assets\_Scripts\Game.View\Base\Interface\IBaseView.cs" />
     <Compile Include="Assets\_Scripts\Game.View\GameOverView\GameOverView.cs" />
     <Compile Include="Assets\_Scripts\Game.View\GameOverView\Interfaces\IGameOverView.cs" />
+    <Compile Include="Assets\_Scripts\Game.View\GamePlayView\GameplayView.cs" />
+    <Compile Include="Assets\_Scripts\Game.View\GamePlayView\Interfaces\IGameplayView.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

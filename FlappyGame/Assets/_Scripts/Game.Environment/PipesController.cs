@@ -52,7 +52,6 @@ namespace Game.Environment
         private void IntervallyCreatePipes()
         {
             currentTime += Time.deltaTime;
-            Debug.Log(currentTime);
             if (currentTime > nextPipeTime)
             {
                 nextPipeTime += pipesSettings.GetSecondsIntervalToNextPipe();

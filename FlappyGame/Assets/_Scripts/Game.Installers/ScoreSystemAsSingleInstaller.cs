@@ -11,6 +11,7 @@ namespace Game.Installers
             base.InstallSystem(subContainer);
             BindContractAndSubstitutionWithModeAsSingle<IScoreSystem, ScoreSystem>();
             BindContractAndSubstitutionWithModeFromResolve<IGameOverView, GameOverView>();
+            BindContractAndSubstitutionWithModeFromResolve<IGameplayView, GameplayView>();
         }
     }
 }
