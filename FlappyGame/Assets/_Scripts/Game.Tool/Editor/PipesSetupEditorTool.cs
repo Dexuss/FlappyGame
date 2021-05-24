@@ -1,18 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEditor;
+using Zenject;
 
-public class PipesSetupEditorTool : MonoBehaviour
+namespace Game.Tool
 {
-    // Start is called before the first frame update
-    void Start()
+    public class EditPipesEditorTool : EditorWindow
     {
-        
-    }
+        [MenuItem("Tools/FlappyGameTools/EditCurrentPipes")]
+        private static void Open()
+        {
+            GetWindow(typeof(EditPipesEditorTool));
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnGUI()
+        {
+            GUILayout.Label("Edit current pipes", EditorStyles.boldLabel);
+            var assets = AssetDatabase.FindAssets("", new[] { "Assets/_Data/Pipes" });
+            foreach (var guid in assets)
+            {
+                var clip = AssetDatabase.LoadAssetAtPath<ScriptableObject>(AssetDatabase.GUIDToAssetPath(guid));
+                GUILayout.Label(clip.GetType().ToString(), EditorStyles.boldLabel);
+                Editor.CreateEditor(clip).OnInspectorGUI();
+            }
+        }
     }
 }
