@@ -1,5 +1,8 @@
-﻿public interface IBaseView 
+﻿namespace Game.View
 {
-    void ShowView();
-    void HideView();
+    public interface IBaseView
+    {
+        void ShowView();
+        void HideView();
+    }
 }

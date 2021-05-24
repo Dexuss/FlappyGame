@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Game.View
+﻿namespace Game.View
 {
     public class GameOverView : BaseView, IGameOverView
     {
