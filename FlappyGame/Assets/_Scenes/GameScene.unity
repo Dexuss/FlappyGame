@@ -1357,6 +1357,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1306778623}
     m_Modifications:
+    - target: {fileID: 1310380494688829064, guid: 9f8570e72c07d5244b8fc221025cf476,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310380494688829064, guid: 9f8570e72c07d5244b8fc221025cf476,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310380494688829064, guid: 9f8570e72c07d5244b8fc221025cf476,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1310380494688829065, guid: 9f8570e72c07d5244b8fc221025cf476,
         type: 3}
       propertyPath: m_RootOrder
@@ -1434,7 +1449,7 @@ PrefabInstance:
     - target: {fileID: 2142475791323273489, guid: bb326e32fb9198243898e94dd9315713,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2142475791323273490, guid: bb326e32fb9198243898e94dd9315713,
         type: 3}
@@ -1684,6 +1699,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1306778623}
     m_Modifications:
+    - target: {fileID: 6813333073457052345, guid: 2a02ad48f6ca22240ac5bf031c3050de,
+        type: 3}
+      propertyPath: groundAnimation
+      value: 
+      objectReference: {fileID: 779499739}
     - target: {fileID: 6813333073457052349, guid: 2a02ad48f6ca22240ac5bf031c3050de,
         type: 3}
       propertyPath: m_RootOrder

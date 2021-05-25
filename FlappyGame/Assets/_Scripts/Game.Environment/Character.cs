@@ -1,6 +1,7 @@
 ﻿using Game.Inputs;
 using Game.Installers;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Game.Environment
@@ -22,6 +23,9 @@ namespace Game.Environment
         #region Fields
         [SerializeField]
         private Rigidbody2D characterRigidbody;
+
+        [SerializeField]
+        private SpriteRenderer backgroundImage;
         #endregion
 
         void Start()
@@ -53,6 +57,7 @@ namespace Game.Environment
             scoreSystemFacade.AddPoint();
             AddBomb();
             scoreSystemFacade.SetCurrentPoints();
+            ChangeBackgroundColor();
         }
 
         private void AddBomb()
@@ -73,6 +78,11 @@ namespace Game.Environment
                 scoreSystemFacade.UpdateBombsCounter();
             else
                 scoreSystemFacade.HideBombs();
+        }
+
+        public void ChangeBackgroundColor()
+        {
+            backgroundImage.color = UnityEngine.Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         }
     }
 }
