@@ -123,6 +123,7 @@
     <Compile Include="Assets\_Scripts\Game.Score\Settings\ScoreSettings.cs" />
     <Compile Include="Assets\_Scripts\Game.Score\System\Interfaces\IScoreSystem.cs" />
     <Compile Include="Assets\_Scripts\Game.Score\System\ScoreSystem.cs" />
+    <Compile Include="Assets\_Scripts\Game.Tool\Keys.cs" />
     <Compile Include="Assets\_Scripts\Game.View\Base\BaseView.cs" />
     <Compile Include="Assets\_Scripts\Game.View\Base\Interface\IBaseView.cs" />
     <Compile Include="Assets\_Scripts\Game.View\GameOverView\GameOverView.cs" />

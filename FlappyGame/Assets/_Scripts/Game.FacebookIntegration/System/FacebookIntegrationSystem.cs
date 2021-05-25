@@ -47,9 +47,8 @@ namespace Game.FacebookIntegration
 
         public void Share()
         {
-            FB.ShareLink(new System.Uri("https://i.ibb.co/py6bRLZ/birdIcon.png"), "My score in FlappyGame!",
-                "I've got " + scoreSystemFacade.GetCurrentScore() + " point!",
-                new System.Uri("https://i.ibb.co/py6bRLZ/birdIcon.png"));
+            string scoreText = "I've got " + scoreSystemFacade.GetCurrentScore().ToString() + " point!";
+            FB.ShareLink(new System.Uri("https://i.ibb.co/py6bRLZ/birdIcon.png"), "My score in FlappyGame!",  scoreText, new System.Uri("https://i.ibb.co/py6bRLZ/birdIcon.png"));
         }
     }
 }

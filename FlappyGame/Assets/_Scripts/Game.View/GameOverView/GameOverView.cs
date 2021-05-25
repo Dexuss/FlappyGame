@@ -9,9 +9,6 @@ namespace Game.View
     public class GameOverView : BaseView, IGameOverView
     {
         [Inject]
-        private IEnvironmentSystemFacade environmentSystemFacade;
-
-        [Inject]
         private IScoreSystemFacade scoreSystemFacade;
 
         [Inject]
@@ -53,18 +50,23 @@ namespace Game.View
         private void AddButtonsListeners()
         {
             playAgainButton.onClick.AddListener(PlayAgain);
-            facebookShareButton.onClick.AddListener(facebookIntegrationSystemFacade.Share);
-        }
-
-        public void FreezeScene()
-        {
-            Time.timeScale = 0;
+            facebookShareButton.onClick.AddListener(FacebookShare);
         }
 
         public void PlayAgain()
         {
             Time.timeScale = 1;
             SceneManager.LoadScene(0);
+        }
+
+        private void FacebookShare()
+        {
+            facebookIntegrationSystemFacade.Share();
+        }
+
+        public void FreezeScene()
+        {
+            Time.timeScale = 0;
         }
     }
 }

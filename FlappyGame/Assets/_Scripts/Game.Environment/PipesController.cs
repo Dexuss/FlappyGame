@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 using Zenject;
 
 namespace Game.Environment
@@ -40,7 +39,7 @@ namespace Game.Environment
 
         void Start()
         {
-            groundAnimation.speed = pipesSettings.GetPipesSpeed();
+            groundAnimation.speed = pipesSettings.GetPipesSpeed() / Keys.GROUND_RATIO_MOVEMENT;
         }
 
         void Update()

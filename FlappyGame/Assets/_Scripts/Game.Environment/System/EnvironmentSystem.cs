@@ -1,7 +1,4 @@
-﻿using Game.Inputs;
-using Game.Installers;
-using UnityEngine;
-using Zenject;
+﻿using Zenject;
 
 namespace Game.Environment
 {
