@@ -1,4 +1,7 @@
-﻿namespace Game.Score
+﻿using Game.Data;
+using System.Collections.Generic;
+
+namespace Game.Score
 {
     public interface IScoreSystem
     {
@@ -7,6 +10,9 @@
         void AddBomb();
         void RemoveBomb();
         int GetCurrentBombsCount();
+        List<int> GetHighScoreList();
+        void SaveScore();
+        bool IsScoreAddedToScoreboard();
         void RestartScore();
     }
 }

@@ -102,6 +102,7 @@
     <Compile Include="Assets\_Scripts\Game.Installers\Settings\CharacterSettingsInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Settings\PipesSettingsIntaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Settings\ScoreSettingsInstaller.cs" />
+    <Compile Include="Assets\_Scripts\Game.Installers\StartViewMonoBehaviourInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Score\Settings\Interfaces\IScoreSettings.cs" />
     <Compile Include="Assets\_Scripts\Game.Score\Settings\ScoreSettings.cs" />
     <Compile Include="Assets\_Scripts\Game.Score\System\Interfaces\IScoreSystem.cs" />
@@ -112,6 +113,8 @@
     <Compile Include="Assets\_Scripts\Game.View\GameOverView\Interfaces\IGameOverView.cs" />
     <Compile Include="Assets\_Scripts\Game.View\GamePlayView\GameplayView.cs" />
     <Compile Include="Assets\_Scripts\Game.View\GamePlayView\Interfaces\IGameplayView.cs" />
+    <Compile Include="Assets\_Scripts\Game.View\StartView\Interfaces\IStartView.cs" />
+    <Compile Include="Assets\_Scripts\Game.View\StartView\StartView.cs" />
     <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
     <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
     <Reference Include="UnityEngine">

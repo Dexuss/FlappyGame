@@ -17,6 +17,7 @@ namespace Game.Installers
             BindContractAndSubstitutionWithModeAsSingle<IScoreSystem, ScoreSystem>();
             BindContractAndSubstitutionWithModeFromResolve<IGameOverView, GameOverView>();
             BindContractAndSubstitutionWithModeFromResolve<IGameplayView, GameplayView>();
+            BindContractAndSubstitutionWithModeFromResolve<IStartView, StartView>();
             BindContractAndSubstitutionWithModeFromResolve<IScoreSettings, ScoreSettings>();
         }
     }

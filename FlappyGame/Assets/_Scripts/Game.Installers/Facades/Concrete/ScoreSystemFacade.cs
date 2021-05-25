@@ -1,5 +1,7 @@
-﻿using Game.Installers;
+﻿using Game.Data;
+using Game.Installers;
 using Game.View;
+using System.Collections.Generic;
 
 namespace Game.Score
 {
@@ -8,14 +10,26 @@ namespace Game.Score
         private readonly IScoreSystem scoreSystem;
         private readonly IGameOverView gameOverView;
         private readonly IGameplayView gameplayView;
+        private readonly IStartView startView;
         private readonly IScoreSettings scoreSettings;
 
-        public ScoreSystemFacade(IScoreSystem scoreSystem, IGameOverView gameOverView, IGameplayView gameplayView, IScoreSettings scoreSettings)
+        public ScoreSystemFacade(IScoreSystem scoreSystem, IGameOverView gameOverView, IGameplayView gameplayView, IScoreSettings scoreSettings, IStartView startView)
         {
             this.scoreSystem = scoreSystem;
             this.gameOverView = gameOverView;
             this.gameplayView = gameplayView;
             this.scoreSettings = scoreSettings;
+            this.startView = startView;
+        }
+
+        public void ShowGameplayView()
+        {
+            gameplayView.ShowView();
+        }
+
+        public void HideGameplayView()
+        {
+            gameplayView.HideView();
         }
 
         public void ShowGameOverView() 
@@ -85,6 +99,21 @@ namespace Game.Score
         public int GetPointsForBomb()
         {
             return scoreSettings.GetPointsForBomb();
+        }
+
+        public List<int> GetHighScoreList()
+        {
+            return scoreSystem.GetHighScoreList();
+        }
+
+        public void SaveScore()
+        {
+            scoreSystem.SaveScore();
+        }
+
+        public bool IsScoreAddedToScoreboard()
+        {
+            return scoreSystem.IsScoreAddedToScoreboard();
         }
 
         public void RestartScore()

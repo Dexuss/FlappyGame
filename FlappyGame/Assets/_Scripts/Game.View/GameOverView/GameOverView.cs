@@ -18,6 +18,9 @@ namespace Game.View
         private Button playAgainButton;
 
         [SerializeField]
+        private GameObject scoreBoardNotification;
+
+        [SerializeField]
         private Text score;
 
         private void Start()
@@ -28,9 +31,16 @@ namespace Game.View
         public override void ShowView()
         {
             score.text = scoreSystemFacade.GetCurrentScore().ToString();
-            //scoreSystemFacade.SaveScore();
+            scoreSystemFacade.SaveScore();
+            ShowHighScoreNotification();
             scoreSystemFacade.RestartScore();
             base.ShowView();
+        }
+
+        private void ShowHighScoreNotification()
+        {
+            if (scoreSystemFacade.IsScoreAddedToScoreboard())
+                scoreBoardNotification.SetActive(true);
         }
 
         private void AddButtonListeners()

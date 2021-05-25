@@ -1,7 +1,12 @@
-﻿namespace Game.Installers
+﻿using Game.Data;
+using System.Collections.Generic;
+
+namespace Game.Installers
 {
     public interface IScoreSystemFacade
     {
+        void ShowGameplayView();
+        void HideGameplayView();
         void ShowGameOverView();
         void HideGameOverView();
         void AddPoint();
@@ -15,6 +20,9 @@
         void SetCurrentBombs();
         int GetPointsForBomb();
         void UpdateBombsCounter();
+        List<int> GetHighScoreList();
+        void SaveScore();
+        bool IsScoreAddedToScoreboard();
         void RestartScore();
     }
 }

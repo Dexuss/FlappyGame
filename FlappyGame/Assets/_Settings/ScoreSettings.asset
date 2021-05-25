@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     pointsForBomb: 2
+    scoreboardMaxPositions: 5
