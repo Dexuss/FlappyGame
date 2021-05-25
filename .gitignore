@@ -1,0 +1,10 @@
+# =============== #
+# Unity generated #
+# =============== #
+/FlappyGame/[Ll]ibrary/
+/FlappyGame/[Tt]emp/
+/FlappyGame/[Oo]bj/
+/FlappyGame/[Bb]uild/
+/FlappyGame/[Bb]uilds/
+/FlappyGame/[Ll]ogs/
+!/FlappyGame/[Aa]ssets/**/*.meta
