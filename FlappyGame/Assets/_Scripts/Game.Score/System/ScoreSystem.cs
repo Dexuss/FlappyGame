@@ -66,7 +66,6 @@ namespace Game.Score
             var currentScore = playerScore;
             if (currentScore == 0) return;
             int maxPositions = scoreSettings.GetScoreboardMaxPositions();
-            Debug.Log(GetHighScoreList().Count);
             var scores = GetHighScoreList().OrderByDescending(score => score).Take(maxPositions).ToList();
             scores.Add(currentScore);
             scores = scores.OrderByDescending(score => score).ToList();

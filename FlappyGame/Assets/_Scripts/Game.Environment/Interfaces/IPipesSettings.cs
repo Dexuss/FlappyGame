@@ -1,11 +1,14 @@
 ﻿using Game.Data;
 using System.Collections.Generic;
 
-public interface IPipesSettings
+namespace Game.Environment
 {
-    float GetPipesSpeed();
-    float GetSecondsIntervalToNextPipe();
-    int GetPipesLimit();
-    float GetPipesHeightMaxDifference();
-    List<PipesData> GetCurrentPipesData();
+    public interface IPipesSettings
+    {
+        float GetPipesSpeed();
+        float GetSecondsIntervalToNextPipe();
+        int GetPipesLimit();
+        float GetPipesHeightMaxDifference();
+        List<PipesData> GetCurrentPipesData();
+    }
 }

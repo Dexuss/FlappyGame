@@ -12,7 +12,7 @@ namespace Game.Inputs
 
         public bool IsTouchReceived()
         {
-            return Input.touchCount > 0 || Input.GetMouseButtonDown(0);
+            return Input.touches.Length == 1 || Input.GetMouseButtonDown(0);
         }
 
         public bool IsDoubleTap()
