@@ -14,8 +14,14 @@ namespace Game.View
         [Inject]
         private IScoreSystemFacade scoreSystemFacade;
 
+        [Inject]
+        private IFacebookIntegrationSystemFacade facebookIntegrationSystemFacade;
+
         [SerializeField]
         private Button playAgainButton;
+
+        [SerializeField]
+        private Button facebookShareButton;
 
         [SerializeField]
         private GameObject scoreBoardNotification;
@@ -25,11 +31,12 @@ namespace Game.View
 
         private void Start()
         {
-            AddButtonListeners();
+            AddButtonsListeners();
         }
 
         public override void ShowView()
         {
+            facebookIntegrationSystemFacade.Initialize();
             score.text = scoreSystemFacade.GetCurrentScore().ToString();
             scoreSystemFacade.SaveScore();
             ShowHighScoreNotification();
@@ -43,9 +50,10 @@ namespace Game.View
                 scoreBoardNotification.SetActive(true);
         }
 
-        private void AddButtonListeners()
+        private void AddButtonsListeners()
         {
             playAgainButton.onClick.AddListener(PlayAgain);
+            facebookShareButton.onClick.AddListener(facebookIntegrationSystemFacade.Share);
         }
 
         public void FreezeScene()
