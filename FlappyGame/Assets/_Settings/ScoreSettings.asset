@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ScoreSettings
   m_EditorClassIdentifier: 
   settings:
-    pointsForBomb: 2
+    pointsForBomb: 10
     scoreboardMaxPositions: 5

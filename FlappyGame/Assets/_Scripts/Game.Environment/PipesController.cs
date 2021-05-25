@@ -28,6 +28,9 @@ namespace Game.Environment
         [SerializeField]
         private SinglePipes singlePipesPrefab;
 
+        [SerializeField]
+        private Animator groundAnimation;
+
         #region Fields
         private List<ISinglePipes> currentPipes = new List<ISinglePipes>();
         private float currentTime;
@@ -36,7 +39,7 @@ namespace Game.Environment
 
         void Start()
         {
-            
+            groundAnimation.speed = pipesSettings.GetPipesSpeed();
         }
 
         void Update()
