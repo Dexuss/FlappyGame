@@ -91,6 +91,8 @@
     <Compile Include="Assets\_Scripts\Game.Environment\SinglePipes.cs" />
     <Compile Include="Assets\_Scripts\Game.Environment\System\EnvironmentSystem.cs" />
     <Compile Include="Assets\_Scripts\Game.Environment\System\Interfaces\IEnvironmentSystem.cs" />
+    <Compile Include="Assets\_Scripts\Game.FacebookIntegration\System\FacebookIntegrationSystem.cs" />
+    <Compile Include="Assets\_Scripts\Game.FacebookIntegration\System\Interfaces\IFacebookIntegrationSystem.cs" />
     <Compile Include="Assets\_Scripts\Game.Inputs\System\InputSystem.cs" />
     <Compile Include="Assets\_Scripts\Game.Inputs\System\Interfaces\IInputSystem.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Base\BaseAsSingleInstaller.cs" />
@@ -99,11 +101,14 @@
     <Compile Include="Assets\_Scripts\Game.Installers\CharacterMonoBehaviourInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\EnvironmentSystemAsSingleInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Concrete\EnvironmentSystemFacade.cs" />
+    <Compile Include="Assets\_Scripts\Game.Installers\Facades\Concrete\FacebookIntegrationSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Concrete\InputSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Concrete\ScoreSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Interfaces\IEnvironmentSystemFacade.cs" />
+    <Compile Include="Assets\_Scripts\Game.Installers\Facades\Interfaces\IFacebookIntegrationSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Interfaces\IInputSystemFacade.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\Facades\Interfaces\IScoreSystemFacade.cs" />
+    <Compile Include="Assets\_Scripts\Game.Installers\FacebookIntegrationSystemAsSingleInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\GameOverViewMonoBehaviourInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\GameplayViewMonobehaviourInstaller.cs" />
     <Compile Include="Assets\_Scripts\Game.Installers\InputSystemAsSingleInstaller.cs" />
