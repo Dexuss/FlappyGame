@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 43365c49a82de1b4eaefd1ebec2095ba, type: 3}
   m_Name: PipesSettings
-  m_EditorClassIdentifier: Assembly-CSharp:Game.Installers:PipesSettingsInstaller
+  m_EditorClassIdentifier: 
   settings:
     pipesSpeed: 2
     secondsIntervalToNextPipe: 2
     pipesLimit: 4
     pipesHeightMaxDifference: 2
     usedPipes:
-    - {fileID: 11400000, guid: f5030f037e0f62c4dbcc90878ab434a6, type: 2}
     - {fileID: 11400000, guid: 372b47f168b0eee4fa84c20b03ab4ea3, type: 2}
     - {fileID: 11400000, guid: 65cf7cf61abbebd46bcef4de4fc02c63, type: 2}
+    - {fileID: 11400000, guid: f5030f037e0f62c4dbcc90878ab434a6, type: 2}

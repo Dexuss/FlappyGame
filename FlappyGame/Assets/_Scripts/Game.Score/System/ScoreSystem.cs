@@ -1,5 +1,4 @@
-﻿using Game.Data;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Zenject;
@@ -24,7 +23,7 @@ namespace Game.Score
 
         public void AddBomb()
         {
-            if (bombsCount >= 3) return;
+            if (bombsCount >= scoreSettings.GetBombsMaxCapacity()) return;
             bombsCount++;
         }
 
@@ -48,7 +47,7 @@ namespace Game.Score
             List<int> highScore = new List<int>();
             for (int i = 0; i < scoreSettings.GetScoreboardMaxPositions(); i++)
             {
-                var savePosition = "ScorePosition" + i;
+                var savePosition = Keys.SCORE_SAVE_NAME + i;
                 if (PlayerPrefs.HasKey(savePosition))
                 {
                     highScore.Add(PlayerPrefs.GetInt(savePosition));
@@ -64,9 +63,10 @@ namespace Game.Score
         {
             isLastScoreAddedToScoreboard = false;
             var currentScore = playerScore;
+
             if (currentScore == 0) return;
+
             int maxPositions = scoreSettings.GetScoreboardMaxPositions();
-            Debug.Log(GetHighScoreList().Count);
             var scores = GetHighScoreList().OrderByDescending(score => score).Take(maxPositions).ToList();
             scores.Add(currentScore);
             scores = scores.OrderByDescending(score => score).ToList();
@@ -79,9 +79,10 @@ namespace Game.Score
                 var savePosition = 0;
                 foreach (var score in scores)
                 {
-                    PlayerPrefs.SetInt("ScorePosition" + savePosition, score);
+                    PlayerPrefs.SetInt(Keys.SCORE_SAVE_NAME + savePosition, score);
                     savePosition++;
                 }
+
                 PlayerPrefs.Save();
                 isLastScoreAddedToScoreboard = true;
             }

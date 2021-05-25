@@ -6,5 +6,6 @@ namespace Game.Score
     {
         int GetPointsForBomb();
         int GetScoreboardMaxPositions();
+        int GetBombsMaxCapacity();
     }
 }

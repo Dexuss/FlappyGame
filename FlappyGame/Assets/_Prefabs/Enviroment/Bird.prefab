@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterRigidbody: {fileID: 1588883849}
+  backgroundImage: {fileID: 0}
 --- !u!114 &3430646223885347723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _components:
-  - {fileID: 455939088922237748}
+  - {fileID: 3626815668180839674}
   _identifier: 
   _useSceneContext: 1
   _context: {fileID: 0}

@@ -1,7 +1,6 @@
 ﻿using Game.Environment;
 using UnityEngine;
 
-
 namespace Game.Installers
 {
     public class PipesMonoBehaviourInstaller : BaseMonoBehaviourInstaller
@@ -13,9 +12,9 @@ namespace Game.Installers
         public override void InstallSystem()
         {
             base.InstallSystem();
-            pipesSettingsInstaller.InstallBindingInSubcontainer(Container);
             BindContractAndSubstitutionWithModeFromResolve<IPipesController, PipesController>();
             subContainer.BindFactory<SinglePipes, Transform, ISinglePipes, PlaceholderPipesFactory>().FromFactory<ConcretePipesFactory>();
+            pipesSettingsInstaller.InstallBindingInSubcontainer(Container);
             BindContractAndSubstitutionWithModeFromResolve<IPipesSettings, PipesSettings>();
         }
     }

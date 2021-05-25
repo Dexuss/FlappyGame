@@ -11,6 +11,9 @@ namespace Game.Score
         [SerializeField]
         private int scoreboardMaxPositions;
 
+        [SerializeField]
+        private int bombsMaxCapacity;
+
         public int GetPointsForBomb()
         {
             return pointsForBomb;
@@ -19,6 +22,11 @@ namespace Game.Score
         public int GetScoreboardMaxPositions()
         {
             return scoreboardMaxPositions;
+        }
+
+        public int GetBombsMaxCapacity()
+        {
+            return bombsMaxCapacity;
         }
     }
 }
